@@ -10,13 +10,15 @@ public class Main {
 
 	public static void main(String[] args) {
 			
-		Department dpt = new Department(1, "Eletronicos");
+		//Department dpt = new Department(1, "Eletronicos");
 		
-		Seller seller = new Seller(1, "vinicius", "vini@gmail", new Date(), 1000.00, dpt);
+		//Seller seller = new Seller(1, "vinicius", "vini@gmail", new Date(), 1000.00, dpt);
 		
 		SellerDao sellerDao = DaoFactory.createSellerDao(); 
 		
-		System.out.println(dpt);
+		Seller seller = sellerDao.findById(4); 
+		
+		//System.out.println(dpt);
 		
 		System.out.println(seller);
 		
