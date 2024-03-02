@@ -1,5 +1,6 @@
 package application;
-import java.util.Date;
+
+import java.util.List;
 
 import dao.DaoFactory;
 import dao.SellerDao;
@@ -9,21 +10,20 @@ import entities.Seller;
 public class Main {
 
 	public static void main(String[] args) {
-			
-		//Department dpt = new Department(1, "Eletronicos");
-		
-		//Seller seller = new Seller(1, "vinicius", "vini@gmail", new Date(), 1000.00, dpt);
-		
-		SellerDao sellerDao = DaoFactory.createSellerDao(); 
-		
-		Seller seller = sellerDao.findById(4); 
-		
-		//System.out.println(dpt);
-		
-		System.out.println(seller);
-		
-		
 
+		SellerDao sellerDao = DaoFactory.createSellerDao();
+
+		System.out.println("-- Teste 1: FindById --");
+		Seller seller = sellerDao.findById(8);
+		System.out.println(seller.getName() +", "+ seller.getDepartment());
+		
+		System.out.println("-- Teste 2: FindByDepartment --");
+		Department department = new Department(2, null);
+		List<Seller> list = sellerDao.findByDepartment(department); 
+		
+		for (Seller seller2 : list) {
+			System.out.println(seller2.getName());
+		}
 	}
 
 }

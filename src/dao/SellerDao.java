@@ -2,6 +2,7 @@ package dao;
 
 import java.util.List;
 
+import entities.Department;
 import entities.Seller;
 
 public interface SellerDao {
@@ -11,4 +12,5 @@ public interface SellerDao {
 	Seller findById(Integer id); // irá consultar no DB de existe um obj com esse id, 
 									 //se exixtir irá retornar o departamento
 	List<Seller> findAll();	//retornar tudo 
+	List<Seller> findByDepartment(Department department);
 }
