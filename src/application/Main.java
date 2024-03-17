@@ -53,9 +53,23 @@ public class Main {
 		
 		
 		System.out.println("----- Department -----");
+		/* 
+		System.out.println("----- Insert -----");
 		Department dpt2 = new Department(5, "Games");
 		departmentDao.insert(dpt2);
-		System.out.println("Inserção feita! \nId: "+ dpt2.getId());
+		System.out.println("Inserção feita! \nId: "+ dpt2.getId());*/
+		
+		/*System.out.println("----- Update -----");
+		Department dpt = new Department(5, "Games Update");
+		departmentDao.update(dpt);*/
+		
+		System.out.println("----- DeleteById -----");
+		//Department dpt = new Department(5, null);
+		departmentDao.deleteById(5);
+		
+		
+		
+		
 		
 		
 		
